@@ -1,0 +1,73 @@
+Get all events api_response_text looks like: 
+    {
+      "pagination": {
+         "object_count": 321,
+         "page_number": 1,
+         "page_size": 50,
+         "page_count": 7,
+         "continuation": "cOnTinUaTionC0d3",
+         "has_more_items": true
+       },
+      "events": [
+          {
+            "name": {
+              "text": "Event Name Goes Here!",
+                ...
+             },
+             ...
+             "url": "https://www.eventbrite.com/e/event-name-goes-here-123456789",
+             "id": "123456789",
+             "start": {
+                "timezone": "America/Los_Angeles",
+                "local": "20212-01-01T18:30:00",
+                "utc": "2022-01-01T01:30:00Z",
+              },
+              ...
+          },
+          ...
+        ]
+     }
+
+========
+
+Get a single event's attendees api_response_text looks like:
+{
+  "pagination": {
+    "object_count": 65,
+    "page_number": 1,
+    "page_size": 50,
+    "page_count": 2,
+    "continuation": "cOnTinUaTionC0d3",
+    "has_more_items": true
+  },
+  "attendees": [
+    {
+      ...
+      },
+      "resource_uri": "https://www.eventbriteapi.com/v3/events/EVENT_ID/
+          attendees/ATTENDEE_ID/",
+      "id": "ATTENDEE_ID",
+      "changed": "2021-12-02T04:51:21Z",
+      "created": "2021-12-02T04:51:17Z",
+      "quantity": 1,
+      "variant_id": null,
+      "profile": {
+        "first_name": "First",
+        "last_name": "Last",
+        "email": "first_last@emailadress.com",
+        "name": "First Last",
+        "addresses": {
+          "home": {
+            "city": "San Francisco",
+            "country": "US",
+            "region": "CA",
+            "postal_code": "91409",
+            "address_1": "1234 Street Ave",
+            "address_2": "Unit 42"
+          }
+        },
+      },
+      "event_id": "EVENT_ID",
+ ...
+  ]
+}
