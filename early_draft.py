@@ -2,8 +2,7 @@ import csv
 import json
 import requests
 import os
-import write_csv
-import get_data
+
 
 
 # Get all events belonging to an organization:
